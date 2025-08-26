@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 // Middleware
 app.use(express.json());
 
-//Routes
+// Routes
 app.get('/', (req, res) => {
   res.json({
     message: 'Hello from Docker CI/CD Pipeline!',
