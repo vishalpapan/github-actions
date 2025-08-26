@@ -2,7 +2,7 @@
 
 A hands-on exploration of GitHub Actions for CI/CD automation, demonstrating the transition from Jenkins to cloud-native DevOps practices.
 
-## 🚀 What This Project Demonstrates
+##  What This Project Demonstrates
 
 ### **1. Basic CI Pipeline**
 - **Python Application**: Simple calculator with unit tests
@@ -16,7 +16,7 @@ A hands-on exploration of GitHub Actions for CI/CD automation, demonstrating the
 - **Code Quality**: ESLint, Jest testing, CodeQL analysis
 - **Automated Deployment**: Docker Hub integration with versioning
 
-## 📊 Pipeline Architecture
+##  Pipeline Architecture
 
 ```
 Code Push → Quality Gates → Security Scan → Docker Build → Image Test → Deploy
@@ -26,7 +26,7 @@ Code Push → Quality Gates → Security Scan → Docker Build → Image Test �
   Matrix      Coverage       Trivy        Push          Check     Success
 ```
 
-## 🛠️ Technologies Used
+## Technologies Used
 
 - **CI/CD**: GitHub Actions (YAML workflows)
 - **Languages**: Python, Node.js/JavaScript
@@ -36,24 +36,24 @@ Code Push → Quality Gates → Security Scan → Docker Build → Image Test �
 - **Registry**: Docker Hub
 - **Coverage**: Codecov integration
 
-## 🔧 Key Features Implemented
+## Key Features Implemented
 
 ### **DevOps Best Practices**
-- ✅ **Infrastructure as Code**: YAML-based pipeline configuration
-- ✅ **Security First**: Multiple security scanning layers
-- ✅ **Quality Gates**: Automated code quality checks
-- ✅ **Container Security**: Non-root users, health checks
-- ✅ **Parallel Execution**: Matrix builds and job dependencies
-- ✅ **Artifact Management**: Docker image versioning and caching
+-  **Infrastructure as Code**: YAML-based pipeline configuration
+-  **Security First**: Multiple security scanning layers
+-  **Quality Gates**: Automated code quality checks
+-  **Container Security**: Non-root users, health checks
+-  **Parallel Execution**: Matrix builds and job dependencies
+-  **Artifact Management**: Docker image versioning and caching
 
 ### **GitHub Actions Advantages**
-- ✅ **Zero Infrastructure**: No server management required
-- ✅ **Native Integration**: Seamless GitHub ecosystem
-- ✅ **Rich Marketplace**: 1000+ pre-built actions
-- ✅ **Matrix Builds**: Built-in parallel testing
-- ✅ **Secrets Management**: Encrypted environment variables
+-  **Zero Infrastructure**: No server management required
+-  **Native Integration**: Seamless GitHub ecosystem
+-  **Rich Marketplace**: 1000+ pre-built actions
+-  **Matrix Builds**: Built-in parallel testing
+-  **Secrets Management**: Encrypted environment variables
 
-## 📈 Learning Outcomes
+##  Learning Outcomes
 
 ### **Jenkins vs GitHub Actions**
 | Aspect | Jenkins | GitHub Actions |
@@ -72,7 +72,7 @@ Code Push → Quality Gates → Security Scan → Docker Build → Image Test �
 - Cloud-native CI/CD practices
 - GitOps workflow implementation
 
-## 🎯 Real-World Applications
+## Real-World Applications
 
 This project demonstrates enterprise-ready practices:
 - **Microservices Deployment**: Container-based architecture
@@ -81,7 +81,7 @@ This project demonstrates enterprise-ready practices:
 - **DevOps Automation**: End-to-end pipeline automation
 - **Cloud-Native**: Serverless CI/CD infrastructure
 
-## 🚀 Getting Started
+##  Getting Started
 
 1. **Clone Repository**: `git clone https://github.com/vishalpapan/github-actions.git`
 2. **Setup Secrets**: Add Docker Hub credentials to repository secrets
