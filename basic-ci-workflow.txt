@@ -1,0 +1,71 @@
+name: Basic CI Pipeline
+
+# When to trigger this workflow
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Test Python Application
+    runs-on: ubuntu-latest
+    
+    # Matrix strategy - test multiple Python versions
+    strategy:
+      matrix:
+        python-version: [3.8, 3.9, '3.10', '3.11']
+    
+    steps:
+    # Step 1: Checkout code from repository
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    # Step 2: Setup Python environment
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+    
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r examples/python-app/requirements.txt
+    
+    # Step 4: Run tests
+    - name: Run tests with pytest
+      run: |
+        cd examples/python-app
+        pytest test_app.py -v --cov=app --cov-report=term-missing
+    
+    # Step 5: Run the application
+    - name: Run application
+      run: |
+        cd examples/python-app
+        python app.py
+
+  lint:
+    name: Code Quality Check
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install linting tools
+      run: |
+        pip install flake8 black
+    
+    - name: Run flake8
+      run: |
+        flake8 examples/python-app/ --count --select=E9,F63,F7,F82 --show-source --statistics
+    
+    - name: Check code formatting with black
+      run: |
+        black --check examples/python-app/
