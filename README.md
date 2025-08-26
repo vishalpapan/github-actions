@@ -1,4 +1,4 @@
-# GitHub Actions Zero to Hero - Vishal's Learning Journey
+# GitHub Actions CICD Pipeline
 
 This repository contains hands-on examples of GitHub Actions CI/CD pipelines, progressing from basic to advanced implementations.
 
