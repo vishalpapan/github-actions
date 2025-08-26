@@ -29,13 +29,11 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: '18'
-        cache: 'npm'
-        cache-dependency-path: examples/docker-app/package-lock.json
     
     - name: Install dependencies
       run: |
         cd examples/docker-app
-        npm ci
+        npm install
     
     - name: Run ESLint
       run: |
