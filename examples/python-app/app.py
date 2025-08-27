@@ -1,4 +1,4 @@
-# Simple Calculator App for GitHub Actions Demo
+# Simple Calculator App  for GitHub Actions Demo
 
 def add(a, b):
     """Add two numbers"""
