@@ -4,11 +4,11 @@ on:
   push:
     branches: [ main, develop ]
     paths:
-      - 'examples/docker-app/**'
+      - 'examples/python-app/**'
   pull_request:
     branches: [ main ]
     paths:
-      - 'examples/docker-app/**'
+      - 'examples/python-app/**'
 
 env:
   REGISTRY: docker.io
