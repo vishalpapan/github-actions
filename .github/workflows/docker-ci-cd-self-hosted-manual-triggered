@@ -18,7 +18,7 @@ env:
 jobs:
   code-quality:
     name: Code Quality & Testing (Self-Hosted)
-    runs-on: self-hosted  # 🔧 Key difference: runs on your own infrastructure
+    runs-on: self-hosted  # Key difference: runs on your own infrastructure
     
     steps:
     - name: Checkout code
